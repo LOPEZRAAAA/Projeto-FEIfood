@@ -4,6 +4,7 @@
 
 #ifndef CLIONPROJECTS_FEIFOOD_H
 #define CLIONPROJECTS_FEIFOOD_H
+#include <stdio.h>
 
 #endif //CLIONPROJECTS_FEIFOOD_H
 
@@ -25,8 +26,15 @@ int alimentos_pedidos() {
 int avaliar_pedido() {
 
 }
-int cadastrar_usuario() {
 
+
+ void cadastrar_usuario(char usuario[255]) {
+ FILE *f = fopen("usuario.txt", "a");
+ fprintf(f, "%s\n", usuario);
+ printf("Usuario cadastrado com sucesso\n");
+ while (fopen("usuario.txt", "r+")) {
+
+ }
 }
 int login_usuario() {
 
